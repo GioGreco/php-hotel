@@ -53,16 +53,23 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container vh-100 bg-black">
+    <div class="container bg-black">
         <div class="filterBar mb-4">
 
         </div>
-        <div class="row">
+        <div class="hotels row p-4">
             <?php
                 foreach($hotels as $hotel){
             ?>
                 <div class="hotel-card col-12 col-sm-6 col-md-4 col-lg-3">
-                    
+                    <div class="picBox">
+                        <img class="w-100" src="./img/hotel.png" alt="random hotel icon">
+                    </div>
+                    <h3 class="hotel-name"><?php echo $hotel['name']?></h3>
+                    <span class="valutation">valutazione: <?php echo $hotel['vote']?></span>
+                    <div class="description"><?php echo $hotel['description']?></div>
+                    <p class="distance">Distanza dal centro: <?php echo $hotel['distance_to_center']?></p>
+                    <span class="parking">Posto auto: <?php echo ($hotel['parking'])? 'Si':'No'?></span>
                 </div>
             <?php
                 }
