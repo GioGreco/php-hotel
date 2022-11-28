@@ -130,7 +130,7 @@
                     <span class="valutation">valutazione: <?php for($i = 0; $i < $hotel['vote']; $i++){
                         echo "<i class='fa-solid fa-star'></i>";
                     }?></span>
-                    <div class="description"><?php echo $hotel['description']?></div>
+                    <div class="description border-bottom border-top border-white my-2"><?php echo $hotel['description']?></div>
                     <p class="distance">Distanza dal centro: <?php echo $hotel['distance_to_center']?> km</p>
                     <span class="parking">Posto auto: <?php echo ($hotel['parking'])? 'Si':'No'?></span>
                 </div>
